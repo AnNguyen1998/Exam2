@@ -59,7 +59,10 @@ public class DanhSachVatPham {
                 .orElse(0);
         vatPhamList.stream()
                 .filter(item -> item.soVang == maxV)
-                .forEach(System.out::println);
+                .forEach(item -> {
+                    System.out.println(item.toString());
+                    System.out.println("So vang: " + item.soVang);
+                });
     }
     public void cau4(){
         try{
@@ -70,8 +73,13 @@ public class DanhSachVatPham {
                     .sum();
             if(vangCuudongdoi >= tongVang){
                 System.out.println("Spon da giai cuu thanh cong dong doi!!!");
+                System.out.println("Tong so vang can de giai cuu: " + tongVang);
+                System.out.println("So vang hien co: " + vangCuudongdoi);
             } else {
                 System.out.println("Voi so vang hien tai Spon khong the giai cuu dong doi");
+                System.out.println("Tong so vang can de giai cuu: " + tongVang);
+                System.out.println("So vang hien co: " + vangCuudongdoi);
+                System.out.println("Con thieu vang: " + (tongVang - vangCuudongdoi));
             }
         }catch (InputMismatchException e){
             System.out.println("Vui long nhap lai!!!");
