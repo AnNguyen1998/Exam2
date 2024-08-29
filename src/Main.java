@@ -4,9 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         DanhSachVatPham dsvp = new DanhSachVatPham();
+        Scanner sc = new Scanner(System.in);
         while (true){
             try{
-                Scanner sc = new Scanner(System.in);
+
                 System.out.println("Menu");
                 System.out.println("1. Nhap Vat pham");
                 System.out.println("2. Xuat danh sach Vat pham");
@@ -28,6 +29,8 @@ public class Main {
                 }
             }catch (InputMismatchException e){
                 System.out.println("Vui long nhap lai!!!");
+                sc.next();
+
             }
         }
     }

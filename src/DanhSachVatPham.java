@@ -50,6 +50,7 @@ public class DanhSachVatPham {
             vatPhamList.add(vp);
         }catch (InputMismatchException e){
             System.out.println("Vui long nhap lai !!!");
+            sc.next();
         }
     }
     public void maxVang(){
@@ -83,6 +84,7 @@ public class DanhSachVatPham {
             }
         }catch (InputMismatchException e){
             System.out.println("Vui long nhap lai!!!");
+            sc.next();
         }
 
     }

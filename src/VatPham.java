@@ -82,6 +82,7 @@ public abstract class VatPham {
             this.vang = sc.nextInt();
         }catch (InputMismatchException e){
             System.out.println("Vui long nhap lai");
+            sc.next();
         }
 
     }
